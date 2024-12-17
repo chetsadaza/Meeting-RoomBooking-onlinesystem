@@ -1,0 +1,99 @@
+/* ปุ่มบวก */
+.add-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  cursor: grab;
+}
+
+.add-button.dragging {
+  cursor: grabbing;
+}
+
+.add-button button {
+  background-color: #28a745;
+  color: white;
+  font-size: 24px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-button button:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+/* คอนเทนเนอร์ฟอร์ม */
+#reservation-container {
+  position: fixed;
+  top: 0;
+  right: -500px; /* ซ่อนฟอร์มไว้ด้านขวาของหน้าจอ */
+  width: 500px;
+  height: 100%;
+  background: white;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: right 0.3s ease; /* เลื่อนฟอร์มอย่างนุ่มนวล */
+  display: none; /* ซ่อนแบบหายไปจาก DOM */
+}
+
+#reservation-container.show {
+  display: block; /* แสดงฟอร์ม */
+  right: 0; /* เลื่อนฟอร์มจากขอบหน้าจอ */
+}
+
+#reservation-container h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

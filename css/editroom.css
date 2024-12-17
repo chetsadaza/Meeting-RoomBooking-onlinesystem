@@ -1,0 +1,71 @@
+/* ตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* กล่องฟอร์ม */
+.form-container {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ป้ายกำกับ */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+/* ช่องกรอกข้อมูล */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* เอฟเฟกต์เมื่ออยู่ในโฟกัส */
+input[type="text"]:focus, textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* ปุ่ม */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* เปลี่ยนสีปุ่มเมื่อชี้เมาส์ */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* จัดการช่องกรอกแบบ textarea */
+textarea {
+    resize: none;
+}

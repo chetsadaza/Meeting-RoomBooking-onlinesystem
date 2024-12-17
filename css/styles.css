@@ -1,0 +1,150 @@
+/* Global Styles */
+body {
+  background: #eaeef6; /* สีพื้นหลัง */
+  font-family: 'Open Sans', sans-serif; /* ฟอนต์ */
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 2rem); /* ความสูงเต็มหน้าจอ หัก Padding */
+}
+
+.navbar__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar__item {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.navbar__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px; /* ความกว้างของไอคอน */
+  height: 56px; /* ความสูงของไอคอน */
+  border-radius: 50%; /* ทำให้เป็นวงกลม */
+  text-decoration: none;
+  color: #6a778e; /* สีข้อความปกติ */
+  transition: 250ms ease all;
+  background: transparent; /* สีพื้นหลังปกติ */
+}
+
+.navbar__link.active {
+  background: #406ff3; /* สีพื้นหลังเมื่อ Active */
+  color: #fff; /* สีข้อความ/ไอคอนเมื่อ Active */
+}
+
+.navbar__link:hover {
+  background: rgba(64, 111, 243, 0.8); /* สีพื้นหลังเมื่อ Hover */
+  color: #fff; /* สีไอคอนเมื่อ Hover */
+}
+
+.navbar__tooltip {
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none; /* ไม่ให้ Tooltip รับการคลิก */
+  background: #fff;
+  color: #406ff3; /* สีข้อความ */
+  padding: 0.5rem 1rem; /* ระยะห่างภายใน Tooltip */
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 250ms ease all;
+}
+
+.navbar__item:hover .navbar__tooltip {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+/* Submenu Style */
+.navbar__submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%; /* เลื่อนลงจาก Settings */
+  left: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* ซ่อนโดยเริ่มต้น */
+  z-index: 10;
+}
+
+.navbar__submenu .navbar__subitem {
+  margin: 0;
+}
+
+.navbar__submenu .navbar__sublink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #6a778e; /* สีข้อความของ Submenu */
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 250ms ease;
+}
+
+.navbar__submenu .navbar__sublink:hover {
+  background: rgba(64, 111, 243, 0.1); /* พื้นหลังเมื่อ Hover */
+  color: #406ff3; /* สีข้อความเมื่อ Hover */
+}
+
+/* Show Submenu on Hover */
+.navbar__item:hover .navbar__submenu {
+  display: block; /* แสดง Submenu */
+}
+
+
+
+.navbar__submenu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__item:hover .navbar__submenu {
+  display: block;
+}
+
+.navbar__subitem {
+  padding: 10px;
+}
+
+.navbar__sublink {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__sublink i {
+  margin-right: 8px;
+}

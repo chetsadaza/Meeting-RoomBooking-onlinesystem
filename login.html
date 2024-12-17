@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script  src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" ></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/login.css">
+    <title>Meeting RoomBooking onlinesystem</title>
+</head>
+<body>
+
+	
+
+	<div class="container my-5" >
+		<a href="home1.php" class="btn btn-secondary custom-btn" style="position: absolute; top: 5px; left: 10px;">กลับหน้า Home</a>
+	</div>
+	
+	<style>
+		.custom-btn {
+			padding: 10px 20px;
+			font-size: 16px;
+			font-weight: bold;
+			color: #fff;
+			background-color: #6c757d; /* สีพื้นหลัง */
+			border: 2px solid #6c757d; /* กรอบ */
+			border-radius: 10px; /* มุมโค้ง */
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงา */
+			transition: all 0.3s ease; /* การเปลี่ยนสีหรือขนาด */
+			text-decoration: none; /* เอาเส้นขีดออก */
+		}
+	
+		.custom-btn:hover {
+			background-color: #5a6268; /* สีเมื่อเมาส์ชี้ */
+			border-color: #5a6268; /* กรอบสีเมื่อเมาส์ชี้ */
+			box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
+			transform: scale(1.05); /* ขยายเล็กน้อยเมื่อ hover */
+		}
+	</style>
+
+
+
+
+		<div class="veen">
+			<div class="login-btn splits">
+				<p>เป็นผู้ใช้อยู่แล้ว?</p>
+				<button class="active">Login</button>
+			</div>
+			<div class="rgstr-btn splits">
+				<p>ยังไม่มีบัญชี?</p>
+				<button>Register</button>
+			</div>
+			<div class="wrapper">
+
+
+				
+				<form id="login" tabindex="500" action="process_login.php" method="POST">
+					<h3>Login</h3>
+					<div class="mail">
+						<input type="email" name="email">
+						<label>Mail</label>
+					</div>
+					<div class="passwd">
+						<input type="password" name="password">
+						<label>Password</label>
+					</div>
+					<div class="submit">
+						<button class="dark" type="submit" name="login_1">Login</button>
+					</div>
+				</form>
+				
+
+				
+				<div id="notification" style="display: none;"></div>
+				<div id="message" style="display: none; padding: 10px; margin: 10px 0; border-radius: 5px;"></div>
+				<form id="register" tabindex="502"  action="register.php" method="POST">
+					<h3>Register</h3>
+					<div class="name">
+						<input type="text" name="name"required>
+						<label>Full Name</label>
+					</div>
+					<div class="mail">
+						<input type="mail" name="email"required>
+						<label>Mail</label>
+					</div>
+					<div class="phone">
+						<input type="text" name="phone"required>
+						<label>Phone</label>
+					</div>
+					<div class="passwd">
+						<input type="password" name="password"required>
+						<label>Password</label>
+					</div>
+					<div class="submit">
+						<button class="dark">Register</button>
+					</div>
+				</form>
+			</div>
+		</div>	
+	</div>
+
+
+	<style type="text/css">
+		.site-link{
+      padding: 5px 15px;
+			position: fixed;
+			z-index: 99999;
+			background: #fdfbfb;
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			right: 30px;
+			bottom: 30px;
+			border-radius: 10px;
+		}
+		.site-link img{
+			width: 30px;
+			height: 30px;
+		}
+	</style>
+	<script src="./js/register.js"></script>
+</body>
+</html>

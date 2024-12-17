@@ -1,0 +1,53 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
+  .popup-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .popup-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #edit-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  #delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  #close-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+
+
+  
+
+
+
+
+  
